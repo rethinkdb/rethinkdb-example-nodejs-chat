@@ -1,0 +1,17 @@
+extend layout
+
+block content
+  .jumbotron.masthead
+    .container
+      h1= title
+      if message
+        .alert-warning.alert= message
+      form(action="login", method="post")
+        div
+          label(for="username") Email:
+          input(type="text", name="username", id="username")
+        div
+          label(for="password") Password:
+          input(type="text", type="password", name="password", id="password")
+        div
+          input(type="submit").btn.btn.success Log in

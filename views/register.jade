@@ -1,0 +1,23 @@
+extend layout
+
+block content
+  .jumbotron.masthead
+    .container
+      h1= title
+      if message
+        .alert-warning.alert= message
+      form(action="register", method="post")
+        div
+          label(for="username") Username:
+          input(type="text", name="username", id="username")
+        div
+          label(for="email") E-mail:
+          input(type="text", name="email", id="email")
+        div
+          label(for="password") Password:
+          input(type="password", name="password", id="password")
+        div
+          label(for="password2") Retype password:
+          input(type="password", name="password2", id="password2")
+        div
+          input(type="submit").btn.btn.success Register

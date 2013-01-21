@@ -1,0 +1,22 @@
+extend layout
+
+block scripts
+  script(src="/socket.io/socket.io.js")
+
+block content
+  .container-fluid
+      .row-fluid
+        .span2
+          h1 Online users
+          ul.nav.nav-stacked.nav-tabs#users
+
+        .span10.chat-wrap
+          #messages
+          .in-putter.span8
+            form#sendmessage
+              input(type="text")#message
+              input(type="hidden", id="name", value=user.id)
+              button.btn.btn-large#send.btn-danger
+                i.icon-bolt
+                |  Send
+          script(src="sock.js")

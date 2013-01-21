@@ -1,0 +1,11 @@
+extend layout
+
+block content
+  .jumbotron.masthead
+    .container
+      h1= title
+      label Email:
+      p= seeUser.mail
+      label ...and why not show password hash:
+      p= seeUser.password
+
