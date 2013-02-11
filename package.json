@@ -1,6 +1,6 @@
 {
   "name": "awesome_chat2k",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node app"
@@ -13,6 +13,7 @@
     "passport-local": "*",
     "bcrypt": "*",
     "socket.io": "*",
-    "connect-flash": "*"
+    "connect-flash": "*",
+    "debug": "*"
   }
 }
