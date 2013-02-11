@@ -20,10 +20,13 @@ app.configure(function() {
   app.use(passport.session());
   app.use(flash())
   app.use(app.router);
+
+  // set up the RethinkDB database
+  db.setup();
 });
 
 
-db.setup();
+
 
 
 passport.use(new local(
