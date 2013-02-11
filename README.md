@@ -1,6 +1,6 @@
 # What is it #
 
-A fork of [@orkj](https://twitter.com/orkj)'s [node.js chat app](https://github.com/eiriksm/chat-test-2k)
+A fork of the [node.js chat app](https://github.com/eiriksm/chat-test-2k) by [@orkj](https://twitter.com/orkj) 
 using socket.io, rethinkdb, passport and bcrypt on an express app.
 
 
