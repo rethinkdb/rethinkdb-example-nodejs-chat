@@ -26,6 +26,7 @@ app.configure(function() {
   app.use(flash())
   app.use(app.router);
 
+  io.set('log level', 1);
   // set up the RethinkDB database
   db.setup();
 });
