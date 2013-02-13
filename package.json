@@ -14,6 +14,7 @@
     "bcrypt": "*",
     "socket.io": "*",
     "connect-flash": "*",
-    "debug": "*"
+    "debug": "*",
+    "generic-pool": ">= 2.0.3"
   }
 }

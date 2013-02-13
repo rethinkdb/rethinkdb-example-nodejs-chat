@@ -3,6 +3,7 @@
 A fork of the [node.js chat app](https://github.com/eiriksm/chat-test-2k) by [@orkj](https://twitter.com/orkj) 
 using socket.io, rethinkdb, passport and bcrypt on an express app.
 
+_Note_: this branch uses [node-pool](https://github.com/coopernurse/node-pool) for connection pooling.
 
 # Complete stack #
 
@@ -12,6 +13,7 @@ using socket.io, rethinkdb, passport and bcrypt on an express app.
 * [Passport](http://passportjs.org) and [bcrypt](https://github.com/ncb000gt/node.bcrypt.js/)
 * [debug](https://github.com/visionmedia/debug)
 * [RethinkDB](http://www.rethinkdb.com/)
+* [node-pool](https://github.com/coopernurse/node-pool)
 
 # Installation #
 
