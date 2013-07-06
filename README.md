@@ -17,7 +17,7 @@ using socket.io, rethinkdb, passport and bcrypt on an express app.
 
 ```
 git clone git@github.com:rethinkdb/rethinkdb-example-nodejs-chat.git
-npm install
+cd rethinkdb-example-nodejs-chat && npm install
 ```
 
 _Note_: If you don't have RethinkDB installed, you can follow [these instructions to get it up and running](http://www.rethinkdb.com/docs/install/). 
