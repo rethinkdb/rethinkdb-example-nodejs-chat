@@ -3,6 +3,8 @@
 A fork of the [node.js chat app](https://github.com/eiriksm/chat-test-2k) by [@orkj](https://twitter.com/orkj) 
 using socket.io, rethinkdb, passport and bcrypt on an express app.
 
+<div><strong><h4>Note:</h4> This is an example application. Even though it shows an example of how to integrate Passport and bcrypt, you shouldn't assume it is free from security vulnerabilities. Have the code audited carefully by an expert before you put anything modeled on it into production.</strong></div>
+
 
 # Complete stack #
 
