@@ -11,7 +11,7 @@
     "rethinkdb": "1.12.0-0",
     "passport": "0.1.17",
     "passport-local": "0.1.6",
-    "bcrypt": "^0.7.7",
+    "bcrypt": "^0.8.5",
     "socket.io": "0.9.16",
     "connect-flash": "0.1.1",
     "debug": "0.7.4"
