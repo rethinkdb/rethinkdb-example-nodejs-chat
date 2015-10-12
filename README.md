@@ -49,10 +49,6 @@ for more configuration options:
 DEBUG=rdb:* node app
 ```
 
-# Annotated Source Code #
-
-After checking out the code, you can also read the annotated source [here](http://www.rethinkdb.com/docs/examples/node-socket-chat/).
-
 # License #
 
 This demo application is licensed under the MIT license: <http://opensource.org/licenses/mit-license.php>
