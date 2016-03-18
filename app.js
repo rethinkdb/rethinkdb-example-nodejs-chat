@@ -161,7 +161,7 @@ app.post('/register', function(req, res){
         res.redirect('/register');
         console.log("[DEBUG][/register][saveUser] /register");
       }
-      return      
+      return
     }
   );
 });
@@ -182,7 +182,7 @@ app.get('/user/:uid', ensureAuthenticated, function(req, res){
       res.send(404);
     }
     else {
-      res.render('user', { seeUser: user, title: user.username, user: req.user });  
+      res.render('user', { seeUser: user, title: user.username, user: req.user });
     }
   });
 });
@@ -212,7 +212,7 @@ io.sockets.on('connection', function (socket) {
         usersonline[connected_user.id] = {
           id: connected_user.id,
           name: connected_user.username
-        }; 
+        };
       }
     });
   });
@@ -240,7 +240,7 @@ io.sockets.on('connection', function (socket) {
       socket.emit('new message', msg);
 
       // Send message to everyone.
-      socket.broadcast.emit('new message', msg);      
+      socket.broadcast.emit('new message', msg);
     });
   });
 
