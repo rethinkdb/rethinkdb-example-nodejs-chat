@@ -1,10 +1,13 @@
-// A fork of the [node.js chat app](https://github.com/eiriksm/chat-test-2k) 
+// A fork of the [node.js chat app](https://github.com/eiriksm/chat-test-2k)
 // by [@orkj](https://twitter.com/orkj) using socket.io, rethinkdb, passport and bcrypt on an express app.
 //
 // See the [GitHub README](https://github.com/rethinkdb/rethinkdb-example-nodejs-chat/blob/master/README.md)
 // for details of the complete stack, installation, and running the app.
 var express = require('express')
   , app = express()
+  , cookieParser = require('cookie-parser')
+  , bodyParser = require('body-parser')
+  , expressSession = require('express-session')
   , server = require('http').createServer(app)
   , passport = require('passport')
   , flash = require('connect-flash')
@@ -14,21 +17,27 @@ var express = require('express')
   , util = require('util')
   , db = require('./lib/db');
 
-app.configure(function() {
-  app.use(express.static('public'));
-  app.use(express.cookieParser());
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
-  app.use(express.bodyParser());
-  app.use(express.session({ secret: 'keyboard cat' }));
-  app.use(passport.initialize());
-  app.use(passport.session());
-  app.use(flash())
-  app.use(app.router);
+app.use(express.static('public'));
+app.use(cookieParser());
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
 
-  // set up the RethinkDB database
-  db.setup();
-});
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
+
+app.use(expressSession({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash())
+
+// set up the RethinkDB database
+db.setup();
 
 
 
@@ -161,7 +170,7 @@ app.post('/register', function(req, res){
         res.redirect('/register');
         console.log("[DEBUG][/register][saveUser] /register");
       }
-      return      
+      return
     }
   );
 });
@@ -182,7 +191,7 @@ app.get('/user/:uid', ensureAuthenticated, function(req, res){
       res.send(404);
     }
     else {
-      res.render('user', { seeUser: user, title: user.username, user: req.user });  
+      res.render('user', { seeUser: user, title: user.username, user: req.user });
     }
   });
 });
@@ -212,7 +221,7 @@ io.sockets.on('connection', function (socket) {
         usersonline[connected_user.id] = {
           id: connected_user.id,
           name: connected_user.username
-        }; 
+        };
       }
     });
   });
@@ -240,7 +249,7 @@ io.sockets.on('connection', function (socket) {
       socket.emit('new message', msg);
 
       // Send message to everyone.
-      socket.broadcast.emit('new message', msg);      
+      socket.broadcast.emit('new message', msg);
     });
   });
 

@@ -6,14 +6,17 @@
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.4.7",
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.15.0",
+    "connect-flash": "0.1.1",
+    "cookie-parser": "^1.4.1",
+    "debug": "0.7.4",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
     "jade": "1.0.0",
-    "rethinkdb": "^2.2.0",
     "passport": "0.1.17",
     "passport-local": "0.1.6",
-    "bcrypt": "^0.8.5",
-    "socket.io": "0.9.16",
-    "connect-flash": "0.1.1",
-    "debug": "0.7.4"
+    "rethinkdb": "^2.2.0",
+    "socket.io": "0.9.16"
   }
 }
