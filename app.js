@@ -152,7 +152,7 @@ app.post('/register', function(req, res){
   db.saveUser({
       username: req.param('username'),
       mail: req.param('email'),
-      password: bcrypt.hashSync(req.param('password'), 8)
+      password: bcrypt.hashSync(req.param('password'), bcrypt.genSaltSync(11))
     },
     function(err, saved) {
       console.log("[DEBUG][/register][saveUser] %s", saved);
