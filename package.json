@@ -13,10 +13,10 @@
     "debug": "0.7.4",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
-    "jade": "1.0.0",
+    "jade": "1.11.0",
     "passport": "0.1.17",
     "passport-local": "0.1.6",
-    "rethinkdb": "^2.2.0",
+    "rethinkdb": "^2.3.3",
     "socket.io": "1.7.1"
   }
 }
