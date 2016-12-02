@@ -17,6 +17,6 @@
     "passport": "0.1.17",
     "passport-local": "0.1.6",
     "rethinkdb": "^2.2.0",
-    "socket.io": "0.9.16"
+    "socket.io": "1.7.1"
   }
 }
