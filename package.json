@@ -6,7 +6,7 @@
     "start": "node app"
   },
   "dependencies": {
-    "bcrypt": "^0.8.5",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.15.0",
     "connect-flash": "0.1.1",
     "cookie-parser": "^1.4.1",
